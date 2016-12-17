@@ -1,0 +1,107 @@
+@import 'config'
+
+html, body
+  background: $dark-blue
+  // overflow: hidden
+  outline: none
+
+#p1
+  @include page(100vh)
+  background: $dark-blue
+  color: $cyan
+  h1
+    color: $cyan
+
+#getin
+  @include animated($cyan, 5px)
+
+#p2
+  @include handle(100vh, left)
+  position: relative
+  background: $dark-blue
+
+form
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  display: table-cell
+  vertical-align: center
+
+  label
+    @include fontSettings('Raleway')
+    color: $cyan
+
+input[type="text"]
+  @include fontSettings('Raleway')
+
+  text-transform: full-width
+  text-align: center
+
+  background: transparent
+  color: $l-cyan
+
+  border: 1px solid $cyan
+  border-radius: 10px
+
+  width: auto
+  height: 45px
+
+  margin: 0 auto
+  padding: 20px
+
+  font-size: 2em
+
+  &::-webkit-input-placeholder
+    color: rgba(200, 233, 255, .6)
+
+  &::-moz-placeholder
+    color: rgba(200, 233, 255, .6)
+
+  &:-ms-input-placeholder
+    color: rgba(200, 233, 255, .6)
+
+  &:-moz-placeholder
+    color: rgba(200, 233, 255, .6)
+
+.send
+  @include fontSettings('Raleway')
+  @include transition(.3s)
+
+  margin-left: 50%
+  transform: translateX(-50%)
+
+  background: transparent
+  color: $cyan
+
+  border: 1px solid $cyan
+  border-radius: 10px
+
+  margin-top: 25px
+  padding: 10px
+
+  &:hover
+    @include fontSettings('Raleway', bold)
+    background: $cyan
+    color: $dark-blue
+
+.back
+  @include transition(.3s)
+
+  float: left
+  margin-left: 20px
+  position: fixed
+  z-index: 999
+  font-size: 4em
+  &:hover
+    transform: rotate(90deg)
+    cursor: pointer
+
+  a
+    @include transition(.3s)
+
+    color : $cyan
+    text-decoration: none
+
+    &:hover, &:link, &:active
+      text-decoration: none

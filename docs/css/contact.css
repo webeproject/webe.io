@@ -1,0 +1,192 @@
+/* Import the functions break() and density()*/
+/*
+  NOTE: Remember to disable the tooltip when you are on production
+*/
+/*
+  Responsive settings
+  I suggest you to use this breakpoints for your media queries.
+*/
+/*
+  Screen densities.
+  You don't need to change this values.
+*/
+/*
+  Get breakpoint argument name from te $breakpoints map
+  and return media query with his value.
+  NOTE This require a $breakpoints map.
+  Ex: @media screen and (break(BREAKPOINT_NAME)) {...}
+*/
+/*
+  Get density argument name from the $densities map
+  and return the media query with his value.
+  NOTE This require a $densities map.
+  Ex: @media screen and (density(2x)) {...}
+*/
+/* Import the tooltip flag*/
+/*
+  NOTE: Remember to disable the tooltip when you are on production
+*/
+/*
+  Responsive settings
+  I suggest you to use this breakpoints for your media queries.
+*/
+/*
+  Screen densities.
+  You don't need to change this values.
+*/
+/* RGB */
+/* Functions*/
+/* Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800");
+html, body {
+  background: #03090f;
+  outline: none; }
+
+#p1 {
+  width: 100vw;
+  max-width: none;
+  min-width: 100%;
+  height: 100vh;
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  background: 100vh;
+  background: #03090f;
+  color: #1dd9ce; }
+  #p1 .title_center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 8em;
+    font-family: "Raleway";
+    font-weight: 100;
+    color: #fff; }
+    #p1 .title_center mark {
+      color: white;
+      background: rgba(0, 0, 0, 0.5); }
+    @media screen and (max-width: 800px) and (min-resolution: 96dpi) {
+      #p1 .title_center {
+        font-size: 6em; } }
+  #p1 h1 {
+    color: #1dd9ce; }
+
+#getin {
+  cursor: poinxter;
+  position: relative;
+  color: #1dd9ce;
+  text-decoration: none; }
+  #getin:hover {
+    color: #1dd9ce; }
+  #getin:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    bottom: 0;
+    left: 0;
+    background-color: #1dd9ce;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  #getin:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  #getin:active:before {
+    visibility: visible;
+    opacity: 0.7; }
+
+#p2 {
+  width: 100vw;
+  min-width: 100vw;
+  height: 100vh;
+  text-align: left;
+  display: table;
+  position: relative;
+  background: #03090f; }
+  #p2 .subtitle {
+    color: inherit;
+    font-size: 4em;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: table-cell;
+  vertical-align: center; }
+  form label {
+    font-family: "Raleway";
+    font-weight: normal;
+    color: #fff;
+    color: #1dd9ce; }
+
+input[type="text"] {
+  font-family: "Raleway";
+  font-weight: normal;
+  color: #fff;
+  text-transform: full-width;
+  text-align: center;
+  background: transparent;
+  color: #c8e9ff;
+  border: 1px solid #1dd9ce;
+  border-radius: 10px;
+  width: auto;
+  height: 45px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 2em; }
+  input[type="text"]::-webkit-input-placeholder {
+    color: rgba(200, 233, 255, 0.6); }
+  input[type="text"]::-moz-placeholder {
+    color: rgba(200, 233, 255, 0.6); }
+  input[type="text"]:-ms-input-placeholder {
+    color: rgba(200, 233, 255, 0.6); }
+  input[type="text"]:-moz-placeholder {
+    color: rgba(200, 233, 255, 0.6); }
+
+.send {
+  font-family: "Raleway";
+  font-weight: normal;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  color: #1dd9ce;
+  border: 1px solid #1dd9ce;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding: 10px; }
+  .send:hover {
+    font-family: "Raleway";
+    font-weight: bold;
+    color: #fff;
+    background: #1dd9ce;
+    color: #03090f; }
+
+.back {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  float: left;
+  margin-left: 20px;
+  position: fixed;
+  z-index: 999;
+  font-size: 4em; }
+  .back:hover {
+    transform: rotate(90deg);
+    cursor: pointer; }
+  .back a {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #1dd9ce;
+    text-decoration: none; }
+    .back a:hover, .back a:link, .back a:active {
+      text-decoration: none; }

@@ -34,9 +34,10 @@
   Screen densities.
   You don't need to change this values.
 */
+/* RGB */
 /* Functions*/
 /* Fonts*/
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800");
 #page1 {
   width: 100vw;
   max-width: none;
@@ -55,28 +56,13 @@
     font-size: 8em;
     font-family: "Raleway";
     font-weight: 100;
-    color: white; }
-    @media screen and (max-width: 800px) and (min-resolution: 96dpi) {
-      #page1 .title_center {
-        font-size: 6em; } }
+    color: #fff; }
     #page1 .title_center mark {
       color: white;
       background: rgba(0, 0, 0, 0.5); }
-    #page1 .title_center .button {
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: 0;
-      width: 90px;
-      height: 60px;
-      font-size: 0.3em; }
-      #page1 .title_center .button:hover {
-        background: rgba(0, 0, 0, 0.65); }
-      #page1 .title_center .button:active {
-        background: rgba(0, 0, 0, 0.8); }
-    #page1 .title_center span[class^='ion-'], #page1 .title_center span[class*=' ion-'] {
-      font-size: 0.3em; }
+    @media screen and (max-width: 800px) and (min-resolution: 96dpi) {
+      #page1 .title_center {
+        font-size: 6em; } }
 
 nav {
   position: fixed; }
@@ -137,30 +123,6 @@ nav {
           background: white;
           color: black; }
 
-#about {
-  width: 100vw;
-  min-width: 100vw;
-  height: 50vh;
-  text-align: center;
-  display: table; }
-  #about .subtitle {
-    color: white;
-    font-size: 4em;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle; }
-  #about .profile-photo {
-    width: 250px;
-    height: 250px;
-    border-radius: 200px;
-    border: 4px solid black;
-    display: inline; }
-  #about .profile-photo.rawn {
-    background: url(res/rawn.png) center no-repeat;
-    background-size: contain;
-    margin-left: 10%;
-    margin-top: 5%; }
-
 #git {
   position: absolute;
   background: rgba(255, 255, 255, 0.6);
@@ -171,7 +133,7 @@ nav {
   text-align: center;
   display: table; }
   #git .subtitle {
-    color: white;
+    color: inherit;
     font-size: 4em;
     display: table-cell;
     text-align: center;
@@ -196,7 +158,7 @@ nav {
   display: table;
   background: white; }
   .madewithlove .subtitle {
-    color: white;
+    color: inherit;
     font-size: 4em;
     display: table-cell;
     text-align: center;

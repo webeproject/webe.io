@@ -1,0 +1,40 @@
+/* Import the functions break() and density()*/
+/*
+  NOTE: Remember to disable the tooltip when you are on production
+*/
+/*
+  Responsive settings
+  I suggest you to use this breakpoints for your media queries.
+*/
+/*
+  Screen densities.
+  You don't need to change this values.
+*/
+/*
+  Get breakpoint argument name from te $breakpoints map
+  and return media query with his value.
+  NOTE This require a $breakpoints map.
+  Ex: @media screen and (break(BREAKPOINT_NAME)) {...}
+*/
+/*
+  Get density argument name from the $densities map
+  and return the media query with his value.
+  NOTE This require a $densities map.
+  Ex: @media screen and (density(2x)) {...}
+*/
+/* Import the tooltip flag*/
+/*
+  NOTE: Remember to disable the tooltip when you are on production
+*/
+/*
+  Responsive settings
+  I suggest you to use this breakpoints for your media queries.
+*/
+/*
+  Screen densities.
+  You don't need to change this values.
+*/
+/* RGB */
+/* Functions*/
+/* Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800");

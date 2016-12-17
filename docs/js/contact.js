@@ -11,9 +11,9 @@ $(document).ready(function() {
         return false;
     });
 
-    $('#sender').click(function() {
-        var formattedBody = $('#message').text();
-        var mailToLink = "mailto:dev.rawnly@gmail.com?body=" + encodeURIComponent(formattedBody);
+    $('.send').click(function() {
+        var subj = $('#message').val();
+        var mailToLink = "mailto:info@webe.io?subject=" + encodeURIComponent(subj) + "&body=Dear Webe Team, %0A   %0A  ";
         window.location.href = mailToLink;
     });
 });

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +8,7 @@
     <meta name="theme-color" content="#fff">
     <!-- / Meta tags -->
 
-    <title>Cotact | Webe.io </title>
+    <title>Get in touch</title>
 
     <!-- Favicon Url -->
     <link rel="icon" type="image/png" href="css/res/favicon.png">
@@ -36,19 +35,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <!-- Chili CSS -->
-    <link rel="stylesheet" href="https://rawgit.com/Rawnly/Chili.css/master/dist/chili.css">
+    <link rel="stylesheet" href="https://rawgit.com/Rawnly/Chili.css/master/dist/chili.css" >
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Personal Stylesheet -->
-    <link rel="stylesheet" href="css/style.css" />
-</head>
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
 
-<body>
-    <main>
-        <input type="mail" id="mail" placeholder="your@email.ex">
-        <textarea name="name" id="message" rows="8" cols="80">
+    <div id="p1">
+        <span class="back"> <a href="index.html"> <span class="ion-ios-close-empty"></span> </a> </span>
+        <h1 class="title_center"> <a id="getin" href="#p2">Get in touch</a> </h1>
+    </div>
 
-      </textarea>
-        <input type="button" value="Send" id="sender" />
-    </main>
-</body>
+    <div id="p2">
+      <form action="index.html">
+        <label for="message"> Email Us </label> <br>
+        <input type="text" id="message" placeholder="Subject">
 
+        <br>
+
+        <input type="button" value="Send" class="send">
+      </form>
+    </div>
+  </body>
 </html>

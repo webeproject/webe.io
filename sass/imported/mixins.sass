@@ -1,0 +1,103 @@
+@mixin link($color)
+    cursor: pointer !important
+    display: block
+    color: $color
+    text-align: center
+    padding: 20px 16px
+    text-decoration: none
+
+    &:hover
+      text-decoration: none
+      color: darken($color, 10%)
+    &:active
+      text-decoration: none
+      color: darken($color, 15%)
+    &:focus
+      text-decoration: none
+    &:link
+      text-decoration: none
+
+@mixin transition($delay)
+  -webkit-transition: all $delay ease
+  transition: all $delay ease
+
+@mixin fontSettings($family, $weight: normal, $color: #fff)
+  font-family: $family
+  font-weight: $weight
+  color      : $color
+
+@mixin page($bg, $bg_check: true)
+  width: 100vw
+  max-width: none
+  min-width: 100%
+  height: 100vh
+
+  display: table
+  margin: 0 auto
+  padding: 0
+
+  @if ( $bg_check )
+    background: $bg
+
+  .title_center
+    mark
+      color: white
+      background: rgba(0, 0, 0, .5)
+
+    display: table-cell
+    text-align: center
+    vertical-align: middle
+    font-size: 8em
+
+    @include fontSettings('Raleway', 100)
+
+    @media screen and ( max-width: 800px) and (density(1x))
+      font-size: 6em
+
+
+@mixin handle($height, $align: center)
+  width: 100vw
+  min-width: 100vw
+  height: $height
+  text-align: $align
+  display: table
+
+  .subtitle
+    color: inherit
+    font-size: 4em
+    display: table-cell
+    text-align: center
+    vertical-align: middle
+
+@mixin animated($color, $height: 2px, $radius: $height)
+    cursor         : poinxter
+    position       : relative
+    color          : $color
+    text-decoration: none
+
+    &:hover
+        color: $color
+
+    &:before
+        content           : ""
+        position          : absolute
+        width             : 100%
+        height            : $height
+        border-radius     : $radius
+        bottom            : 0
+        left              : 0
+        background-color  : $color
+        visibility        : hidden
+        -webkit-transform : scaleX(0)
+        transform         : scaleX(0)
+        -webkit-transition: all 0.3s cubic-bezier(0.680, -0.550, 0.265, 1.550)
+        transition        : all 0.3s cubic-bezier(0.680, -0.550, 0.265, 1.550)
+
+    &:hover:before
+        visibility       : visible
+        -webkit-transform: scaleX(1)
+        transform        : scaleX(1)
+
+    &:active:before
+        visibility: visible
+        opacity   : 0.7
