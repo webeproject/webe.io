@@ -10,5 +10,7 @@ bower.json
 bower_components
 .DS_Store
 
-sass/
+dist/contact.html
+dist/js/contant.js
+
 coffee/

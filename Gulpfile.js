@@ -13,16 +13,16 @@ gulp.task('default', function() {
     // Watch files and call the task
     // gulp.watch('./coffee/**/*.coffee', ['coffee']);
     gulp.watch('./sass/**/*.sass', ['sass']);
-    gulp.watch('./dist/**/**', ['reload']);
+    gulp.watch('./docs/**/**', ['reload']);
 
     // More Specific
-    // gulp.watch('./dist/**/*.html', ['reload']);
-    // gulp.watch('./dist/js/**/*.js', ['reload']);
+    // gulp.watch('./docs/**/*.html', ['reload']);
+    // gulp.watch('./docs/js/**/*.js', ['reload']);
 
     // BrowserSync init :)
     browserSync.init({
         server: {
-            baseDir: "./dist/",
+            baseDir: "./docs/",
             proxy: 'mylocal.dev'
         }
     });
@@ -32,7 +32,7 @@ gulp.task('default', function() {
 // gulp.task('coffee', function() {
 //   gulp.src('./coffee/*.coffee')
 //     .pipe(coffee({bare: true}).on('error', gutil.log))
-//     .pipe(gulp.dest('./dist/js/'));
+//     .pipe(gulp.dest('./docs/js/'));
 //     browserSync.reload()
 //     console.log( chalk.yellow.inverse.bold('Coffescript ') + chalk.inverse('updated') );
 // });
@@ -40,7 +40,7 @@ gulp.task('default', function() {
 // Convert SASS to CSS
 gulp.task('sass', function() {
     gulp.src('./sass/*.sass'). // Edit `*.sass` to `*.scss` for scss files
-    pipe(sass().on('error', sass.logError)).pipe(gulp.dest('./dist/css/'));
+    pipe(sass().on('error', sass.logError)).pipe(gulp.dest('./docs/css/'));
     browserSync.reload()
     console.log(chalk.yellow.inverse.bold('Sass ') + chalk.inverse('updated'));
 });
