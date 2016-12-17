@@ -11,9 +11,21 @@ $(document).ready(function() {
         return false;
     });
 
-    $('.send').click(function() {
-        var subj = $('#message').val();
-        var mailToLink = "mailto:info@webe.io?subject=" + encodeURIComponent(subj) + "&body=Dear Webe Team, %0A   %0A  ";
-        window.location.href = mailToLink;
+    $('#message').keypress(function(e) {
+      if(e.which == 13) {
+        send('info@webe.io')
+      }
+    });
+
+
+    $('.send').click(function () {
+      send('info@webe.io')
     });
 });
+
+
+function send(mail) {
+  var subj = $('#message').val();
+  var mailToLink = "mailto:" + mail + "?subject=" + encodeURIComponent(subj) + "&body=Dear Webe Team, %0A   %0A  ";
+  window.location.href = mailToLink;
+}
