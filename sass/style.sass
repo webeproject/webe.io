@@ -1,0 +1,98 @@
+/* Import the functions break() and density()*/
+@import '../node_modules/help-media-queries/src/helpers.scss'
+
+/* Import the tooltip flag*/
+@import '../node_modules/help-media-queries/src/tooltip.scss'
+
+@import 'variables'
+@import 'functions'
+@import 'mixins'
+
+/* Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400')
+
+#page1
+  @include page(red, false)
+  color: contrast($azure)
+  background: url(res/wp_2.jpg) top left no-repeat
+  background-size: cover
+
+#page2
+  @include page(rgb(39, 78, 88), true)
+  color: contrast(rgb(39, 78, 88))
+
+
+nav
+  position: fixed
+  ul
+    display: table
+    width: 100vw
+    height: 50px
+    min-width: 100vw
+    background: rgba(0, 0, 0, .3)
+    position: fixed
+
+    list-style-type: none
+    margin: 0
+    padding: 0
+    overflow: hidden
+
+    #logo
+      float: left
+      position: absolute
+      a
+        @include link(white)
+
+    li:not(#logo)
+      float: right
+
+      a
+        @include trasition(.3s)
+        @include link(white)
+        &:hover
+          text-decoration: none
+          background: white
+          color: black
+
+#about
+  @include handle(50vh)
+  .profile-photo
+    width: 250px
+    height: 250px
+    border-radius: 200px
+    border: 4px solid black
+    display: inline
+
+  .profile-photo.rawn
+    background: url(res/rawn.png) center no-repeat
+    background-size: contain
+    margin-left: 10%
+    margin-top: 5%
+
+
+#git
+  position: absolute
+  background: rgba(255, 255, 255, .7)
+  bottom: 0px
+  @include handle(5vh)
+
+  .icon_social
+    @include trasition(.3s)
+    margin: 5px
+    font-size: 2em
+    cursor: pointer !important
+    color: black
+    &:hover, &:active, &:link
+      text-decoration: none
+    &:hover
+      color: lighten(black, 20%)
+
+.madewithlove
+  @include handle(5vh)
+  background: white
+
+  .madeText
+    color: black
+    display: table-cell
+    text-align: center
+    vertical-align: middle

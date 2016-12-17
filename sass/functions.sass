@@ -1,0 +1,4 @@
+
+/* Functions*/
+@function contrast($color)
+    @return if(lightness($color) < 51, #fff, #000)

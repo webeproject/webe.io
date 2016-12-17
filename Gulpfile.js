@@ -11,8 +11,8 @@ gulp.task('default', function () {
   console.log(chalk.green.inverse(' Watching ') + chalk.inverse.bold(' for ') + chalk.inverse.red('changes...'));
 
   // Watch files and call the task
-  gulp.watch('./coffee/**/*.coffee', ['coffee']);
-  gulp.watch('./sass/**/*.scss', ['sass']);
+  // gulp.watch('./coffee/**/*.coffee', ['coffee']);
+  gulp.watch('./sass/**/*.sass', ['sass']);
   gulp.watch('./dist/**/**', ['reload']);
 
   // More Specific
@@ -29,19 +29,19 @@ gulp.task('default', function () {
 });
 
 // Convert CoffeeScript to JavaScript
-gulp.task('coffee', function() {
-  gulp.src('./coffee/*.coffee')
-    .pipe(coffee({bare: true}).on('error', gutil.log))
-    .pipe(gulp.dest('./dist/js/'));
-    browserSync.reload()
-    console.log( chalk.yellow.inverse.bold('Coffescript ') + chalk.inverse('updated') );
-});
+// gulp.task('coffee', function() {
+//   gulp.src('./coffee/*.coffee')
+//     .pipe(coffee({bare: true}).on('error', gutil.log))
+//     .pipe(gulp.dest('./dist/js/'));
+//     browserSync.reload()
+//     console.log( chalk.yellow.inverse.bold('Coffescript ') + chalk.inverse('updated') );
+// });
 
 // Convert SASS to CSS
 gulp.task('sass', function () {
-  gulp.src('./sass/*.scss')
+  gulp.src('./sass/*.sass') // Edit `*.sass` to `*.scss` for scss files
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./dist/css/'));
     browserSync.reload()
     console.log( chalk.yellow.inverse.bold('Sass ') + chalk.inverse('updated') );
 });
