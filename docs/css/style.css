@@ -47,7 +47,7 @@
   margin: 0 auto;
   padding: 0;
   color: #fff;
-  background: url(https://unsplash.it/1920/1080?blur) top left no-repeat;
+  background: url(res/wp.jpg) top left no-repeat;
   background-size: cover; }
   #page1 .title_center {
     display: table-cell;
