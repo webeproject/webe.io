@@ -14,13 +14,8 @@
 #page1
   @include page(red, false)
   color: contrast($azure)
-  background: url(res/wp_2.jpg) top left no-repeat
+  background: url(res/wp.jpg) top left no-repeat
   background-size: cover
-
-#page2
-  @include page(rgb(39, 78, 88), true)
-  color: contrast(rgb(39, 78, 88))
-
 
 nav
   position: fixed
@@ -72,7 +67,7 @@ nav
 
 #git
   position: absolute
-  background: rgba(255, 255, 255, .7)
+  background: rgba(255, 255, 255, .6)
   bottom: 0px
   @include handle(5vh)
 
@@ -85,7 +80,7 @@ nav
     &:hover, &:active, &:link
       text-decoration: none
     &:hover
-      color: lighten(black, 20%)
+      color: #fff
 
 .madewithlove
   @include handle(5vh)
